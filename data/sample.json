@@ -1,0 +1,9 @@
+{
+  "event_id": "092108-019-sample-001",
+  "event_type": "STUDY_REGISTERED",
+  "aggregate_type": "research_study",
+  "aggregate_id": "menopause_research_translation-001",
+  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "version": 1,
+  "summary": "登记更年期研究释义台的首条领域记录"
+}
