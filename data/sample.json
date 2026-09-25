@@ -1,9 +1,33 @@
 {
-  "event_id": "092108-019-sample-001",
-  "event_type": "STUDY_REGISTERED",
-  "aggregate_type": "research_study",
-  "aggregate_id": "menopause_research_translation-001",
-  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "event_id": "claim-window-correlation-1",
+  "event_type": "CLAIM_MAPPED",
+  "aggregate_type": "public_claim",
+  "aggregate_id": "claim-window-correlation",
+  "occurred_at": "2026-09-02T09:00:00+08:00",
   "version": 1,
-  "summary": "登记更年期研究释义台的首条领域记录"
+  "summary": "映射主张：限定绝经 10 年内、45-55 岁无禁忌证人群中的校正后相关",
+  "payload": {
+    "claim_id": "claim-window-correlation",
+    "revision": 1,
+    "statement": "绝经 10 年内、45-55 岁且无禁忌证的女性，启动 MHT 与冠心病事件风险降低相关；该结果为相关性，不等于普遍预防建议。",
+    "study_id": "study-mht-chd-2026",
+    "study_version": 1,
+    "scope": {
+      "population_groups": ["绝经后早期女性"],
+      "age_range": [45, 55],
+      "treatment_windows": [[0, 10]],
+      "endpoints": ["冠心病事件"]
+    },
+    "not_applicable": [
+      "乳腺癌病史",
+      "不明原因阴道出血",
+      "活动性静脉血栓",
+      "绝经超过 10 年或 60 岁以后启动者"
+    ],
+    "limitations_disclosed": ["观察性研究，不能排除残余混杂", "东亚人群占比低"],
+    "result_nature": "correlation_adj",
+    "evidence_grade": 2,
+    "high_risk_note": "",
+    "system_warnings": []
+  }
 }

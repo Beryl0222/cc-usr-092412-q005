@@ -20,10 +20,17 @@
       "type": "string",
       "enum": [
         "STUDY_REGISTERED",
+        "STUDY_VERSION_RECORDED",
+        "EVIDENCE_FLAGGED",
         "CLAIM_MAPPED",
-        "CONTENT_APPROVED",
-        "EVIDENCE_UPDATED",
-        "CORRECTION_PUBLISHED"
+        "CLAIM_REVISED",
+        "VARIANT_DRAFTED",
+        "VARIANT_WORDING_REPLACED",
+        "VARIANT_APPROVAL_MARKED",
+        "VARIANT_FROZEN",
+        "VARIANT_DISTRIBUTED",
+        "CORRECTION_ISSUED",
+        "CORRECTION_ACKNOWLEDGED"
       ]
     },
     "aggregate_type": {
@@ -50,6 +57,10 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object",
+      "description": "事件业务载荷。事件类型与必填载荷字段的权威定义见 src/events.py；关键载荷约定：STUDY_VERSION_RECORDED 记录研究版本、人群、年龄、治疗窗口、终点、排除条件、限制、统计结论与证据等级；EVIDENCE_FLAGGED 的 change_type 取 downgrade/retraction/followup_update；CLAIM_MAPPED/CLAIM_REVISED 每条主张声明 scope、not_applicable、limitations_disclosed 与 result_nature；VARIANT_APPROVAL_MARKED 的 role 取 methodology/clinician/extra_review，decision 取 confirmed/rejected；CORRECTION_ISSUED 必须带 risk_handling，CORRECTION_ACKNOWLEDGED 记录 receiver 与 received_at。"
     }
   },
   "additionalProperties": true
