@@ -21,9 +21,16 @@
       "enum": [
         "STUDY_REGISTERED",
         "CLAIM_MAPPED",
+        "MATERIAL_DRAFTED",
+        "CHECKS_RECORDED",
+        "SIGNOFF_RECORDED",
         "CONTENT_APPROVED",
+        "CONTENT_DISTRIBUTED",
+        "MATERIAL_FLAGGED",
+        "MATERIAL_REVISED",
         "EVIDENCE_UPDATED",
-        "CORRECTION_PUBLISHED"
+        "CORRECTION_PUBLISHED",
+        "RECEIPT_CONFIRMED"
       ]
     },
     "aggregate_type": {
